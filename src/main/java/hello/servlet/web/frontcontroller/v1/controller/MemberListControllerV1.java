@@ -20,10 +20,9 @@ public class MemberListControllerV1 implements ControllerV1 {
         List<Member> members = memberRepository.findAll();
         request.setAttribute("members", members);
 
-        String viewPath = "/WEB-INF/view/members.jsp";
+        String viewPath = "/WEB-INF/views/members.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
 
         dispatcher.forward(request, response);
-
     }
 }
